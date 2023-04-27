@@ -3,7 +3,7 @@ let columns = 16;
 
 const frame = document.createElement('div');
 frame.className = 'frameC';
-
+console.log('hello world');
 for (let i = 0; i < rows; ++i) {
     const row = document.createElement('div');
     row.className = 'rowC';
@@ -16,3 +16,15 @@ for (let i = 0; i < rows; ++i) {
     frame.appendChild(row);
 }
 document.body.appendChild(frame);
+
+new 
+function gridCreator() {
+    let frame = document.createElement('div');
+    frame.className = 'frameC';
+        for (let i = 0; i < rows; ++i) {
+            let singleRow = document.createElement('div');
+            singleRow.className = 'rowClass';
+        }
+    }
+    
+    gridCreator();
