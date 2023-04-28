@@ -24,6 +24,7 @@ function createEtch(rows, columns, sqSize) {
             frame.appendChild(row);  
         }
     document.body.appendChild(frame);
+    colorCreator();
 }
 
 //buton to change grid dimension, calls askUser()
@@ -56,4 +57,17 @@ function deleteEtch(gridNum, newSize) {
         oldGrid[0].parentNode.removeChild(oldGrid[0]);
     }
     createEtch (gridNum, gridNum, newSize);
+}
+
+function colorCreator() {
+    const menuBoxes = document.getElementsByClassName('square');
+    for (var i = 0; i < menuBoxes.length; i++) {
+        menuBoxes[i].onmouseover = function(e) {
+            let color = '#'+Math.floor(Math.random()*16777215).toString(16);
+            let colorString = '0px 0px 30px 0px ' + color;
+            this.style['box-shadow'] = colorString;
+            this.style['-webkit-box-shadow'] = colorString;
+            this.style['-moz-box-shadow'] = colorString;
+        }  
+    }
 }
