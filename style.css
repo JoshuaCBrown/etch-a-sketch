@@ -17,8 +17,6 @@ body {
 
 .square {
     
-    height: 40px;
-    width: 40px;
     border: 1px dashed black;
     box-sizing: border-box;
     transition: background-color 2s ease-out;
